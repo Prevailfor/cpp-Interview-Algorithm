@@ -1,6 +1,6 @@
 
 class Solution1{
- 
+	
 public:
 	bool Find(int target, vector<vector<int> >array){
 		for(int i = 0; i < array.size(); ++i){
