@@ -9,7 +9,7 @@ public:
 				return true;
 		}
 	}
- 
+  
  private:
  	int BinarySearch(vector<int>vt, int target){
  		int l = 0;
