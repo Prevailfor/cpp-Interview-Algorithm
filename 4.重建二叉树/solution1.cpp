@@ -9,7 +9,8 @@
  */
 class Solution {
 public:
-    // dfs from bottom to top
+    // when recursion have return value, the operator order is form bottom to top.
+    // when recursion hvae not return value, the operator order is form top to botoom, just as dfs.
     TreeNode* reConstructBinaryTree(vector<int> pre,vector<int> vin) {
         if(pre.size()==0)
             return NULL;
