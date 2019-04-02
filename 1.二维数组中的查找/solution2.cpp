@@ -13,7 +13,7 @@ public:
           return true;
         else if(target > array[r][c])    //{array[r][i]} < target, so ++r;
           ++r;
-        else --c;                        // array[r][c] > target, maybe target is in this row, so c--
+        else --c;                        // array[r][c] > target, maybe target is in this row, so --c
       }
       return false;                      
     }
