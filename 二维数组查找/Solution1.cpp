@@ -3,8 +3,9 @@ class Solution1{
 	
 public:
 	bool Find(int target, vector<vector<int> >array){
+		int fd;
 		for(int i = 0; i < array.size(); ++i){
-			int fd = BinarySearch(array[i], target);
+			fd = BinarySearch(array[i], target);
 			if(fd != -1)
 				return true;
 		}
