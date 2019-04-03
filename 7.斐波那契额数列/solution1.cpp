@@ -19,5 +19,14 @@ public:
             i++;
         }
         return c;
+        
+        //OR write in this way
+      /*int a = 0;
+        int b = 1;
+        while(n--){
+        b = a + b;
+        a = b - a;
+        }
+        return b;
     }
 };
