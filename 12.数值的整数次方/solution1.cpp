@@ -19,7 +19,7 @@ public:
     double calculate(double base, int times){
         if(times == 0) return 1;
         else if(times == 1) return base;
-        double midv = calculate(base, times/2)* calculate(base, times/2);
+        double midv = calculate(base, times>>1)* calculate(base, times>>1);
         if(times % 2) midv *= base;
         return midv;
     }
