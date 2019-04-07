@@ -24,12 +24,13 @@ public:
         
         if(root->left==NULL && root->right==NULL && tsub==0){ // leaf node
             res.push_back(tmp);
-            return;
         }
-        if(root->left!=NULL)
-            dfs(root->left, tsub);
-        if(root->right!=NULL)
-            dfs(root->right, tsub);
+        else{
+            if(root->left!=NULL)
+                dfs(root->left, tsub);
+            if(root->right!=NULL)
+                dfs(root->right, tsub);
+        }
         
         tmp.pop_back();
     }
