@@ -22,7 +22,7 @@ public:
         tmp.push_back(root->val);
         int tsub = target - root->val;
         
-        if(root->left==NULL && root->right==NULL && tsub){ // leaf node
+        if(root->left==NULL && root->right==NULL && tsub==0){ // leaf node
             res.push_back(tmp);
             return;
         }
