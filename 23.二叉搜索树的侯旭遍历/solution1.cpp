@@ -1,9 +1,5 @@
 class Solution {
 public:
-    // use recursion: 3 step;
-    //1. find the boundry of the BST's left tree and right tree, and check whether the right tree's value is larger than the root node value
-    //2. if step 1 is ture, check whether the left tree satisfy the characteristic of BST.
-    //3. if step 1 is true, check whether the right tree satisfy the characteristic of BST.
     bool VerifySquenceOfBST(vector<int> sequence) {
        if(sequence.empty())
            return false;
@@ -27,6 +23,23 @@ public:
         
         return Judge(vector<int>(sequence.begin(), sequence.begin()+midposlater)) &&    
                     Judge(vector<int>(sequence.begin()+midposlater, sequence.end()-1));
+        
+        // Non-recursion way
+        /*
+        int size = sequence.size();
+        if(0==size)return false;
+ 
+        int i = 0;
+        while(--size)
+        {
+            while(sequence[i++]<sequence[size]);
+            while(sequence[i++]>sequence[size]);
+ 
+            if(i<size)return false;
+            i=0;
+        }
+        return true;
+        */
     }
 };
  
